@@ -10,7 +10,14 @@ namespace World.Controllers
       [HttpGet("/city")]
       public ActionResult Index()
       {
-        List<City> list = City.FilterByCountry();
+        List<City> list = City.GetAll();
+        return View("Index", list);
+      }
+
+      [HttpPost("/city")]
+      public ActionResult GetCity()
+      {
+        List<City> list = City.FilterByCountry(Request.Form["city"]);
         return View("Index", list);
       }
     }

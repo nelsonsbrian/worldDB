@@ -3,6 +3,11 @@
 }
 
 <h2>Here is a list of Cities</h2>
+<form action="/city" method='post'>
+<label for="city">Please enter a country to search for cities:</label>
+<input id="city" name="city" type="text">
+<button class='btn btn-danger' action='City' type='submit'>Get City</button>
+</form>
 <ul>
   @foreach (var city in Model)
   {

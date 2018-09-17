@@ -18,13 +18,13 @@ namespace World.Models
 
 
 
-      public static List<City> FilterByCountry()
+      public static List<City> FilterByCountry(string city)
       {
           List<City> allCities = new List<City> {};
           MySqlConnection conn = DB.Connection();
           conn.Open();
           MySqlCommand cmd = conn.CreateCommand() as MySqlCommand;
-          cmd.CommandText = @"SELECT * FROM City WHERE CountryCode = 'USA' ORDER BY name ASC;";
+          cmd.CommandText = @"SELECT * FROM City WHERE CountryCode = '" + city + "' ORDER BY name ASC;";
           MySqlDataReader rdr = cmd.ExecuteReader() as MySqlDataReader;
           while(rdr.Read())
           {
