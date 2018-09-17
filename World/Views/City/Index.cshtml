@@ -5,7 +5,10 @@
 <h2>Here is a list of Cities</h2>
 <form action="/city" method='post'>
 <label for="city">Please enter a country to search for cities:</label>
-<input id="city" name="city" type="text">
+<input id="city" name="city" type="text"><br>
+<label for="radio">Select for Ascending or Desending for population</label><br>
+<input type="radio" name="order" value="ASC" checked>Ascending<br>
+<input type="radio" name="order" value="DESC">Decending<br>
 <button class='btn btn-danger' action='City' type='submit'>Get City</button>
 </form>
 <ul>
