@@ -1,0 +1,12 @@
+@{
+  Layout = "_Layout";
+}
+
+<h2>Here is a list of Countries</h2>
+<ul>
+  @foreach (var country in Model)
+  {
+    <li>@country.Name is in @country.Continent and has a population of @country.Population</li>
+  }
+
+</ul>

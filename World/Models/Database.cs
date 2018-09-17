@@ -1,8 +1,8 @@
 using System;
 using MySql.Data.MySqlClient;
-using ToDoList;
- 
-namespace ToDoList.Models
+using World;
+
+namespace World.Models
 {
     public class DB
     {

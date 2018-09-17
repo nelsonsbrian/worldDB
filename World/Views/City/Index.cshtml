@@ -1,0 +1,12 @@
+@{
+  Layout = "_Layout";
+}
+
+<h2>Here is a list of Cities</h2>
+<ul>
+  @foreach (var city in Model)
+  {
+    <li>@city.Name has a population of @city.Population</li>
+  }
+
+</ul>

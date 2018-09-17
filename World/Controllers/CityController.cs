@@ -4,13 +4,14 @@ using World.Models;
 
 namespace World.Controllers
 {
-    public class HomeController : Controller
+    public class CityController : Controller
     {
 
-      [HttpGet("/")]
+      [HttpGet("/city")]
       public ActionResult Index()
       {
-        return View();
+        List<City> list = City.FilterByCountry();
+        return View("Index", list);
       }
     }
 }
